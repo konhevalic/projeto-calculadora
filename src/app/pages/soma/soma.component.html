@@ -1,0 +1,18 @@
+<div>
+    <form action="">
+        <label for="numero1">Numero 1: </label>
+        <input #numero1 id="numero1" type="text">
+
+        <label for="numero2">Numero 2: </label>
+        <input #numero2 id="numero2" type="text">
+
+        <button 
+            type="submit" 
+            (click)="somarValores(numero1.value, numero2.value); $event.preventDefault()"
+        >
+            Calcular
+        </button>
+
+        <span>Resultado: {{ result }}</span>
+    </form>
+</div>
