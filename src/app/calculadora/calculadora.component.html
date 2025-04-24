@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Calculadora</h2>
+<div class="form-group">
+      <label for="numero1">Primeiro número:</label>
+      <input type="number" id="numero1" [(ngModel)]="numero1" class="form-
+control">
+    </div>
+<div class="form-group">
+  <label for="numero2">Segundo número:</label>
+  <input type="number" id="numero2" [(ngModel)]="numero2" class="form-
+control">
+</div>
+    <div class="form-group">
+      <label for="operacao">Operação:</label>
+      <select id="operacao" [(ngModel)]="operacao" class="form-control">
+<option value="soma">Soma</option>
+<option value="subtracao">Subtração</option>
+<option value="multiplicacao">Multiplicação</option>
+<option value="divisao">Divisão</option>
+    </select>
+</div>
+  <button (click)="calcular()" class="btn btn-primary">Calcular</button>
+<div class="resultado" *ngIf="resultado !== 0"> <h3>Resultado: {{resultado}}</h3>
+  </div>
+</div>
